@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-    listOne, listTwo := input.ParseDecOne()
-    fmt.Printf("input list one: %d", listOne)
-    fmt.Printf("input list one: %d", listTwo)
-    answer := solutions.DecOne(listOne, listTwo)
-    fmt.Printf("solution: %d\n", answer)
+	listOne, listTwo := input.Parse()
+	answer := solutions.One(listOne, listTwo)
+	fmt.Printf("solution one: %d\n", answer)
+
+    answer = solutions.Two(listOne, listTwo)
+    fmt.Printf("solution two: %d\n", answer)
 }

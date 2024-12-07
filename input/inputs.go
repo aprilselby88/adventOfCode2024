@@ -8,8 +8,8 @@ import (
 	"strings"
 )
 
-func ParseDecOne() ([]int, []int) {
-	file, err := os.Open("input/decOne.txt")
+func Parse() ([]int, []int) {
+	file, err := os.Open("input/one.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return nil, nil
