@@ -7,10 +7,15 @@ import (
 )
 
 func main() {
-	listOne, listTwo := input.Parse()
-	answer := solutions.One(listOne, listTwo)
-	fmt.Printf("solution one: %d\n", answer)
+	listOne, listTwo := input.ParseOne()
+	answer := solutions.OneA(listOne, listTwo)
+	fmt.Printf("solution one A: %d\n", answer)
+    answer = solutions.OneB(listOne, listTwo)
+    fmt.Printf("solution one B: %d\n", answer)
 
-    answer = solutions.Two(listOne, listTwo)
-    fmt.Printf("solution two: %d\n", answer)
+    listThree := input.ParseTwo()
+    answer = solutions.Two(listThree)
+    fmt.Printf("solution two A: %d\n", answer)
+    answer = solutions.TwoB(listThree)
+    fmt.Printf("solution two B: %d\n", answer)
 }
