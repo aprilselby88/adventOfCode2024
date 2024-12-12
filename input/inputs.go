@@ -66,3 +66,14 @@ func ParseTwo() ([][]int) {
 
 	return reports
 }
+
+func ParseThree() string {
+	b, err := os.ReadFile("input/three.txt")
+    if err != nil {
+        fmt.Print(err)
+    }
+
+    str := string(b)
+
+	return str
+}
